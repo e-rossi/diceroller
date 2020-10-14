@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="diceroller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="VMD-kv-Xml">
+                                <rect key="frame" x="30" y="264" width="354" height="145"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="die1" translatesAutoresizingMaskIntoConstraints="NO" id="fZQ-7w-Y42">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="145" id="G1r-3N-pPx"/>
+                                            <constraint firstAttribute="width" constant="145" id="kCR-Mx-7Z9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="die2" translatesAutoresizingMaskIntoConstraints="NO" id="rm7-cX-KRX">
+                                        <rect key="frame" x="193" y="0.0" width="161" height="145"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="145" id="bNW-ou-bLj"/>
+                                            <constraint firstAttribute="width" constant="145" id="qhl-z8-Xjc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="cQu-1q-Y9x"/>
+                                    <constraint firstAttribute="width" constant="338" id="ytS-Dp-wEB"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-a4-Lhv">
+                                <rect key="frame" x="155" y="471" width="105" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="VwY-Wm-4CS"/>
+                                    <constraint firstAttribute="height" constant="21" id="WA0-fi-v2F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlv-BL-k7A">
+                                <rect key="frame" x="30" y="712" width="354" height="40"/>
+                                <color key="backgroundColor" red="0.89588730569948183" green="0.76439064639118615" blue="0.052321553079663949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.050000000000000003" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aRH-0J-0Ow"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
+                                <state key="normal" title="Jogar dados">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sHe-XJ-bgE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xlv-BL-k7A" secondAttribute="trailing" constant="30" id="1v6-an-Egb"/>
+                            <constraint firstItem="Xlv-BL-k7A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="K4g-Nj-Tay"/>
+                            <constraint firstItem="OeT-a4-Lhv" firstAttribute="top" secondItem="VMD-kv-Xml" secondAttribute="bottom" constant="77" id="Lpr-aq-uuR"/>
+                            <constraint firstItem="OeT-a4-Lhv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pnl-MV-gKd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xlv-BL-k7A" secondAttribute="bottom" constant="110" id="U4c-VI-O4m"/>
+                            <constraint firstItem="VMD-kv-Xml" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="dbk-VO-97o"/>
+                            <constraint firstItem="VMD-kv-Xml" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="eF3-Oe-LfW"/>
+                            <constraint firstItem="VMD-kv-Xml" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ibM-b1-6Ua"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VMD-kv-Xml" secondAttribute="trailing" constant="30" id="rvO-m8-ABd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="die1" destination="fZQ-7w-Y42" id="3Rw-NT-mnv"/>
+                        <outlet property="die2" destination="rm7-cX-KRX" id="7Ke-5v-ID1"/>
+                        <outlet property="scoreLabel" destination="OeT-a4-Lhv" id="QGY-Q4-Qp5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-419" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="die1" width="1920" height="1920"/>
+        <image name="die2" width="1920" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
